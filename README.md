@@ -83,7 +83,7 @@ sqlcmd -S .\SQLEXPRESS -i DataWarehouseAnalytics.sql
 
 ## 🚀 Bắt đầu sử dụng
 
-1. Tải về report:
+1. Tải về :
 
 ```bash
 git clone https://github.com/CuongDAol/Project-pbi
@@ -98,8 +98,8 @@ git clone https://github.com/CuongDAol/Project-pbi
 ## 📅 Tác giả
 
 * Tên GitHub: [CuongDAol](https://github.com/CuongDAol)
-* 📧 Email: [cuong.dao.dev@gmail.com](mailto:cuong.dao.dev@gmail.com) (giả định)
+* 📧 Email: [Buipg0801@gmail.com](mailto:buipg0801@gmail.com)
 
 ---
 
-✨ Cảm ơn bạn đã ghé thăm dự án! Hãy nhấn ⭐ star repo nếu bạn thấy hữu ích!
+✨ Cảm ơn bạn đã ghé thăm dự án!
