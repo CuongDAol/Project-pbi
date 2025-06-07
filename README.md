@@ -1,92 +1,105 @@
-📊 Project PBI: Phân Tích Dữ Liệu bằng SQL, Power BI & Tableau
-Dự án tổng hợp các bài thực hành phân tích dữ liệu thực tế sử dụng SQL, Power BI và Tableau trong các lĩnh vực: bán lẻ, chăm sóc khách hàng, bất động sản và y tế. Mục tiêu là xây dựng báo cáo phân tích từ dữ liệu thô đến trình bày trực quan hóa.
+# 📊 Project PBI: Phân Tích Dữ Liệu bằng SQL, Power BI & Tableau
 
- 
+Dự án tổng hợp các bài thực hành phân tích dữ liệu thực tế sử dụng SQL, Power BI và Tableau trong các lĩnh vực: bán lẻ, chăm sóc khách hàng, bất động sản và y tế.
+Mục tiêu: Xây dựng báo cáo phân tích từ dữ liệu thô đến trình bày trực quan hóa.
 
-📁 Cấu trúc thư mục
+---
 
-├── DataWarehouseAnalytics.sql             # Phân tích hiệu suất bán hàng từ mô hình Data Warehouse
-├── Power BI full project.pbix             # Báo cáo phân tích bán hàng bằng Power BI
-├── COVID SQL Project.sql                  # Phân tích dữ liệu COVID-19 bằng SQL
-├── Call Center Tableau Dashboard.pptx     # Báo cáo Tableau về hiệu suất trung tâm cuộc gọi
-└── SQL Housing Data for Data Cleaning.sql # Làm sạch dữ liệu nhà ở bằng SQL
- 
+## 📁 Cấu trúc thư mục
 
-📌 Mục tiêu dự án
-Làm quen với kỹ năng phân tích dữ liệu đa lĩnh vực.
+```bash
+├── DataWarehouseAnalytics.sql             # Phân tích hiệu suất bán hàng từ Data Warehouse
+├── Power BI full project.pbix             # Báo cáo Power BI
+├── COVID SQL Project.sql                  # Phân tích dữ liệu COVID-19
+├── Call Center Tableau Dashboard.pptx     # Dashboard Tableau trung tâm cuộc gọi
+└── SQL Housing Data for Data Cleaning.sql # Tiền xử lý dữ liệu nhà ở
+```
 
-Ứng dụng kỹ thuật SQL nâng cao như CTE, Window Function.
+---
 
-Thiết kế báo cáo dashboard tương tác với Power BI và Tableau.
+## 🌟 Mục tiêu dự án
 
-Làm sạch, chuẩn hóa dữ liệu để sẵn sàng cho phân tích.
+* ✅ Thực hành phân tích dữ liệu thực tế đa ngành
+* ✅ Áp dụng SQL nâng cao: CTE, Window Function
+* ✅ Trực quan hóa báo cáo với Power BI và Tableau
+* ✅ Chuẩn hóa dữ liệu, làm sạch trước khi phân tích
 
- 
+---
 
-📊 Nội dung từng phần
-1. Phân tích bán hàng qua mô hình Data Warehouse
-Truy vấn dữ liệu từ các bảng fact và dimension.
+## 🧰 Nội dung chi tiết
 
-Tính tổng doanh thu, doanh thu theo thời gian, sản phẩm, khách hàng.
+### 1. 💳 Phân tích bán hàng từ Data Warehouse
 
-Sử dụng các hàm cửa sổ như SUM OVER, RANK, LAG để phân tích nâng cao.
+* Truy vấn dữ liệu từ các bảng fact và dimension
+* Tính doanh thu theo thời gian, sản phẩm, khách hàng
+* Dùng SUM OVER, RANK, LAG để phân tích xu hướng
+* Dashboard Power BI: `Power BI full project.pbix`
 
-Trực quan hóa bằng Power BI (file: Power BI full project.pbix).
+🔧 Chạy bằng SSMS hoặc CMD:
 
-▶️ Chạy bằng SSMS hoặc dòng lệnh:
-
-
+```bash
 sqlcmd -S .\SQLEXPRESS -i DataWarehouseAnalytics.sql
- 
+```
 
-2. Phân tích dữ liệu COVID-19 bằng SQL
-Truy xuất và tổng hợp dữ liệu các ca nhiễm, hồi phục và tử vong.
+---
 
-Phân tích theo thời gian và quốc gia.
+### 2. 🪜 Phân tích COVID-19 bằng SQL
 
-Sử dụng GROUP BY, JOIN và hàm thời gian trong SQL Server.
+* Truy vấn số ca nhiễm, hồi phục, tử vong
+* Phân tích theo thời gian và quốc gia
+* Sử dụng GROUP BY, JOIN, các hàm thời gian trong SQL Server
 
- 
+---
 
-3. Báo cáo hiệu suất trung tâm cuộc gọi (Call Center)
-Trình bày bằng Tableau dưới dạng slide (.pptx).
+### 3. 📢 Hiệu suất trung tâm cuộc gọi (Call Center)
 
-Gồm các chỉ số như: thời gian chờ trung bình, tỷ lệ giải quyết cuộc gọi, khối lượng cuộc gọi theo giờ/ngày.
+* Trình bày dạng slide Tableau: `Call Center Tableau Dashboard.pptx`
+* Gồm các KPI:
 
- 
+  * ⌚️ Thời gian chờ trung bình
+  * ✅ Tỷ lệ giải quyết cuộc gọi
+  * 📆 Khối lượng cuộc gọi theo ngày
 
-4. Làm sạch dữ liệu nhà ở (Housing Data Cleaning)
-Xử lý dữ liệu trùng, lỗi, định dạng sai.
+---
 
-Chuẩn hóa cột, đổi kiểu dữ liệu.
+### 4. 🏠 Xử lý dữ liệu nhà ở (Housing Data Cleaning)
 
-Loại bỏ dữ liệu thiếu, tạo bảng chuẩn hóa để phục vụ phân tích sau này.
+* Loại trùng, chuẩn hóa dữ liệu, đổi kiểu cột
+* Tạo bảng dữ liệu sạch sẵn sàng cho dashboard hoặc ML
 
- 
+---
 
-🛠 Công cụ sử dụng
+## 🛠️ Công cụ sử dụng
 
-✔️ Microsoft SQL Server + SSMS (SQL Server Management Studio)
-✔️ Power BI Desktop
-✔️ Tableau Public / Desktop
-✔️ Excel
-✔️ GitHub (quản lý mã nguồn)
- 
+```bash
+🔢 SQL Server + SSMS
+🔍 Power BI Desktop
+🔎 Tableau Public/Desktop
+📇 Excel
+🔸 GitHub
+```
 
-🚀 Hướng dẫn sử dụng
-Clone hoặc tải repo về máy:
+---
 
+## 🚀 Bắt đầu sử dụng
 
+1. Tải về report:
+
+```bash
 git clone https://github.com/CuongDAol/Project-pbi
-Mở các file SQL bằng SSMS để truy vấn.
+```
 
-Mở .pbix bằng Power BI Desktop để xem báo cáo.
+2. Mở file SQL bằng SSMS để truy vấn
+3. Mở file .pbix trong Power BI Desktop để xem dashboard
+4. Trình chiếu slide Tableau trong file .pptx
 
-Xem báo cáo Tableau trong file .pptx trình chiếu.
+---
 
- 
+## 📅 Tác giả
 
-📬 Liên hệ
-Tác giả:Bùi Mạnh Cường
-📧 Email: buipg0801@gmail.com
-📎 GitHub: https://github.com/CuongDAol
+* Tên GitHub: [CuongDAol](https://github.com/CuongDAol)
+* 📧 Email: [cuong.dao.dev@gmail.com](mailto:cuong.dao.dev@gmail.com) (giả định)
+
+---
+
+✨ Cảm ơn bạn đã ghé thăm dự án! Hãy nhấn ⭐ star repo nếu bạn thấy hữu ích!
