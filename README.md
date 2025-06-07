@@ -1,101 +1,92 @@
-📊 Data Analytics Projects (SQL & Power BI)
-📁 Dự án 1: Data Warehouse Sales Performance Analysis (DataWarehouseAnalytics.sql)
-Mô tả
-Phân tích hiệu suất bán hàng thông qua mô hình dữ liệu Data Warehouse gồm các bảng: fact_sales, dim_products, dim_customers.
+📊 Project PBI: Phân Tích Dữ Liệu bằng SQL, Power BI & Tableau
+Dự án tổng hợp các bài thực hành phân tích dữ liệu thực tế sử dụng SQL, Power BI và Tableau trong các lĩnh vực: bán lẻ, chăm sóc khách hàng, bất động sản và y tế. Mục tiêu là xây dựng báo cáo phân tích từ dữ liệu thô đến trình bày trực quan hóa.
 
-Nội dung chính
-Phân tích doanh số theo năm và tháng (YEAR(order_date), DATETRUNC(month, order_date))
+ 
 
-Tính toán tổng, trung bình, lũy kế và trung bình trượt doanh số bằng Window Functions
+📁 Cấu trúc thư mục
 
-So sánh doanh số sản phẩm theo năm và so với trung bình chung (AVG + LAG)
+├── DataWarehouseAnalytics.sql             # Phân tích hiệu suất bán hàng từ mô hình Data Warehouse
+├── Power BI full project.pbix             # Báo cáo phân tích bán hàng bằng Power BI
+├── COVID SQL Project.sql                  # Phân tích dữ liệu COVID-19 bằng SQL
+├── Call Center Tableau Dashboard.pptx     # Báo cáo Tableau về hiệu suất trung tâm cuộc gọi
+└── SQL Housing Data for Data Cleaning.sql # Làm sạch dữ liệu nhà ở bằng SQL
+ 
 
-Phân tích danh mục sản phẩm và phân khúc theo chi phí
+📌 Mục tiêu dự án
+Làm quen với kỹ năng phân tích dữ liệu đa lĩnh vực.
 
-Phân khúc khách hàng thành 3 nhóm: VIP, Regular, New dựa trên hành vi chi tiêu và thời gian sử dụng
+Ứng dụng kỹ thuật SQL nâng cao như CTE, Window Function.
 
-Tạo VIEW tổng hợp báo cáo khách hàng: đơn hàng, giá trị trung bình, độ mới, v.v.
+Thiết kế báo cáo dashboard tương tác với Power BI và Tableau.
 
-Kỹ thuật
-Window functions: SUM() OVER, AVG() OVER, LAG()
+Làm sạch, chuẩn hóa dữ liệu để sẵn sàng cho phân tích.
 
-CTE (WITH)
+ 
 
-VIEW (CREATE VIEW)
+📊 Nội dung từng phần
+1. Phân tích bán hàng qua mô hình Data Warehouse
+Truy vấn dữ liệu từ các bảng fact và dimension.
 
-📁 Dự án 2: Data Cleaning - Housing Dataset (SQL Housing Data for Data Cleaning.sql)
-Mô tả
-Dự án làm sạch dữ liệu bất động sản từ bảng NashvilleHousing với mục tiêu chuẩn hóa, bổ sung, và tổ chức lại dữ liệu.
+Tính tổng doanh thu, doanh thu theo thời gian, sản phẩm, khách hàng.
 
-Nội dung chính
-Chuẩn hóa định dạng ngày bán (SaleDate)
+Sử dụng các hàm cửa sổ như SUM OVER, RANK, LAG để phân tích nâng cao.
 
-Điền dữ liệu thiếu trong PropertyAddress dựa vào ParcelID
+Trực quan hóa bằng Power BI (file: Power BI full project.pbix).
 
-Tách địa chỉ và tên chủ nhà thành các cột riêng biệt (Address, City, State)
+▶️ Chạy bằng SSMS hoặc dòng lệnh:
 
-Chuyển giá trị Yes/No thay cho Y/N trong trường SoldAsVacant
 
-Xoá dòng dữ liệu trùng lặp
+sqlcmd -S .\SQLEXPRESS -i DataWarehouseAnalytics.sql
+ 
 
-Xoá cột không sử dụng (SaleDate)
+2. Phân tích dữ liệu COVID-19 bằng SQL
+Truy xuất và tổng hợp dữ liệu các ca nhiễm, hồi phục và tử vong.
 
-Kỹ thuật
-ISNULL, SUBSTRING, CHARINDEX, PARSENAME, ROW_NUMBER() OVER (...)
+Phân tích theo thời gian và quốc gia.
 
-ALTER TABLE, UPDATE, DELETE, DROP COLUMN
+Sử dụng GROUP BY, JOIN và hàm thời gian trong SQL Server.
 
-📁 Dự án 3: COVID-19 Data Analysis (COVID SQL Project.sql)
-Mô tả
-Phân tích dữ liệu COVID-19 toàn cầu từ bảng Covidfulldata, tập trung vào các chỉ số quan trọng như ca nhiễm, tử vong, và tiêm vaccine.
+ 
 
-Nội dung chính
-Tạo trường mới cho ngày chuẩn hóa (DateConverted)
+3. Báo cáo hiệu suất trung tâm cuộc gọi (Call Center)
+Trình bày bằng Tableau dưới dạng slide (.pptx).
 
-Tỷ lệ tử vong tại Hoa Kỳ theo ngày
+Gồm các chỉ số như: thời gian chờ trung bình, tỷ lệ giải quyết cuộc gọi, khối lượng cuộc gọi theo giờ/ngày.
 
-So sánh số ca nhiễm so với dân số - Tỷ lệ phơi nhiễm
+ 
 
-Các quốc gia có tỷ lệ tử vong và ca nhiễm cao nhất
+4. Làm sạch dữ liệu nhà ở (Housing Data Cleaning)
+Xử lý dữ liệu trùng, lỗi, định dạng sai.
 
-Phân tích theo châu lục
+Chuẩn hóa cột, đổi kiểu dữ liệu.
 
-Tổng số liệu toàn cầu về ca nhiễm, tử vong
+Loại bỏ dữ liệu thiếu, tạo bảng chuẩn hóa để phục vụ phân tích sau này.
 
-Tính phần trăm dân số được tiêm vaccine (cộng dồn theo ngày)
+ 
 
-Tạo bảng tạm và VIEW để phục vụ dashboard sau này
+🛠 Công cụ sử dụng
 
-Kỹ thuật
-CTE, TEMP TABLE, VIEW, SUM() OVER (PARTITION BY ...)
+✔️ Microsoft SQL Server + SSMS (SQL Server Management Studio)
+✔️ Power BI Desktop
+✔️ Tableau Public / Desktop
+✔️ Excel
+✔️ GitHub (quản lý mã nguồn)
+ 
 
-CONVERT, ROUND, CONCAT
+🚀 Hướng dẫn sử dụng
+Clone hoặc tải repo về máy:
 
-📊 Dự án 4: Power BI Dashboard (Power BI full project.pbix)
-Mô tả
-File .pbix đi kèm là dashboard trực quan hoá dữ liệu từ các dự án trên (có thể từ dữ liệu COVID hoặc Data Warehouse).
 
-Gợi ý
-Dùng Power BI để hiển thị:
+git clone https://github.com/CuongDAol/Project-pbi
+Mở các file SQL bằng SSMS để truy vấn.
 
-Tổng quan hiệu suất bán hàng theo tháng/năm
+Mở .pbix bằng Power BI Desktop để xem báo cáo.
 
-Phân tích danh mục và sản phẩm nổi bật
+Xem báo cáo Tableau trong file .pptx trình chiếu.
 
-Dashboard khách hàng: AOV, tần suất, phân khúc
+ 
 
-Tỷ lệ tử vong & tiêm vaccine theo quốc gia/châu lục
-
-⚙️ Công cụ sử dụng
-SQL Server (T-SQL): Xử lý dữ liệu, phân tích, tạo bảng/tầm nhìn/CTE
-
-Power BI: Trực quan hóa dữ liệu
-
-Data Cleaning & Transformation: thông qua query SQL thuần
-
-🏁 Hướng dẫn sử dụng
-Import file .sql vào công cụ như SSMS hoặc Azure Data Studio để chạy lần lượt từng block code.
-
-Mở file .pbix trong Power BI Desktop để chỉnh sửa hoặc xem dashboard.
-
-Tùy chỉnh truy vấn hoặc dashboard theo dữ liệu thực tế của bạn.
+📬 Liên hệ
+Tác giả:Bùi Mạnh Cường
+📧 Email: buipg0801@gmail.com
+📎 GitHub: https://github.com/CuongDAol
